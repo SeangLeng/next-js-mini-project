@@ -125,7 +125,7 @@ export default function Insert() {
                                         Post your product
                                     </h1>
                                     <Form
-                                        className="space-y-4 md:space-y-6 flex justify-center items-center gap-5"
+                                        className="add-responsive space-y-4 md:space-y-6 flex justify-between items-center gap-5"
                                     >
                                         <div>
                                             <div>
@@ -176,8 +176,6 @@ export default function Insert() {
                                             </div>
                                         </div>
                                         <div>
-
-
                                             <div className="flex items-center justify-center w-full">
                                                 <label htmlFor="dropzone-file" className="p-5 flex flex-col items-center justify-center w-72 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
                                                     <div className="flex flex-col items-center justify-center pt-5 pb-6">

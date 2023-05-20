@@ -7,7 +7,7 @@ import { useState } from 'react';
 export default function Navbar() {
     const [productCategory, setcattegory] = useState([]);
     fetch('https://api.escuelajs.co/api/v1/categories?limit=10')
-      .then(response => response.json()).then(response => setcattegory(response));
+        .then(response => response.json()).then(response => setcattegory(response));
 
     function onlyUnique(value, index, array) {
         return array.indexOf(value) === index;
@@ -16,7 +16,7 @@ export default function Navbar() {
     var uniques = productCategory.filter(onlyUnique);
     return (
         <nav class="w-full fixed top-0 z-20 bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
-            <div class="flex flex-wrap items-center justify-between mx-auto p-4 px-28">
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <Link href="/" class="flex items-center">
                     <img src="https://icon-library.com/images/clothing-icon-png/clothing-icon-png-17.jpg" class="h-8 mr-3" alt="Flowbite Logo" />
                     <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Psa</span>
