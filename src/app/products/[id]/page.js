@@ -12,7 +12,7 @@ export async function generateMetadata({ params }) {
   return {
     title: product.title,
     description: product.description,
-    thumbnail: product.images[0],
+    thumbnail: product.images,
     metadataBase: new URL('https://istad.co'),
     alternates: {
       canonical: '/',
