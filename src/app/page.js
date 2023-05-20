@@ -40,12 +40,12 @@ export default function Home() {
         </section>
 
         <section className="page-2 flex-col items-center justify-between w-100">
-          <h1 className='text-5xl font-semibold text-center'>Our <span className='text-green-500'>products</span></h1>
+          <p className='text-5xl font-semibold text-center'>Our <span className='text-green-500'>products</span></p>
           <Suspense fallback={<Loading />}><Product /></Suspense>
         </section>
 
         <section className="page-3 flex-col items-center justify-between w-100">
-          <h1 className='text-5xl font-semibold mt-20 text-center'>Categories <span className='text-green-500'>Collection</span></h1>
+          <p className='text-5xl font-semibold mt-20 text-center'>Categories <span className='text-green-500'>Collection</span></p>
           <Categories />
         </section>
       </main >
