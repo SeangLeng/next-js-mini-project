@@ -1,7 +1,4 @@
-'use client'
 import React from 'react'
-
-
 async function fetchProduct(id) {
   const resp = await fetch(`https://api.escuelajs.co/api/v1/products/${id}`)
   return resp.json()
@@ -12,7 +9,7 @@ export async function generateMetadata({ params }) {
   return {
     title: product.title,
     description: product.description,
-    thumbnail: product.images,
+    thumbnail: product.images[0],
     metadataBase: new URL('https://istad.co'),
     alternates: {
       canonical: '/',
