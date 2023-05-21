@@ -15,7 +15,7 @@ export default function Insert() {
     const FILE_SIZE = 1024 * 1024 * 10; // 10MB
     const SUPPORTED_FORMATS = ["image/jpg", "image/jpeg", "image/gif", "image/png"];
     const [productCategory, setcattegory] = useState([]);
-    fetch(`${BASE_URL}categories?limit=10`)
+    fetch(`${BASE_URL}categories`)
         .then(res => res.json())
         .then(resp => setcattegory(resp));
 
