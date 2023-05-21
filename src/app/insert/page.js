@@ -202,7 +202,7 @@ export default function Insert() {
 
                                                 <button
                                                     disabled={isSubmitting}
-                                                    type="submit" className="mt-10 text-white w-full bg-[#2557D6] hover:bg-[#2557D6]/90 focus:ring-4 focus:ring-[#2557D6]/50 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center  items-center dark:focus:ring-[#2557D6]/50 mr-2 mb-2">
+                                                    type="submit" className="mt-10 text-white w-full bg-green-500 hover:bg-[#2557D6]/90 focus:ring-4 focus:ring-[#2557D6]/50 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center  items-center dark:focus:ring-[#2557D6]/50 mr-2 mb-2">
                                                     <p className="text-center">Post your product into our website here</p>
                                                 </button>
                                             </div>
