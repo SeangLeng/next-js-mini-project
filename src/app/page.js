@@ -1,6 +1,7 @@
 'use client'
 import Image from 'next/image'
 import cover_bg from './images/first-bg.png'
+import Link from 'next/link';
 import Product from './products/page';
 import { Suspense } from 'react';
 import Loading from './loading';
@@ -9,7 +10,7 @@ export default function Home() {
 
   return (
     
-      <main className="home flex-col items-center justify-between p-24">
+      <main className="home flex-col items-center justify-between">
         <section className="page-1 flex items-center justify-between w-100">
           <div>
             <h1 className="header-homepage text-5xl font-bold uppercase"><span className='text-green-400'>Psa</span> of production website</h1>
@@ -35,7 +36,7 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <Image src={cover_bg} alt='cover-bg' />
+          <Image src={cover_bg} alt='cover-bg'/>
         </section>
 
         <section className="page-2 flex-col items-center justify-between w-100">

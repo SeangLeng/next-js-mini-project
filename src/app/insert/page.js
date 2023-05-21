@@ -113,7 +113,7 @@ export default function Insert() {
         >
             {
                 ({ isSubmitting }) => (
-                    <section className="bg-gray-50 dark:bg-gray-900">
+                    <section className="bg-gray-50 dark:bg-gray-900 mb-20">
                         <div className="w-full flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
                             <a href="/" className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
                                 <img className="w-8 h-8 mr-2" src="https://icon-library.com/images/clothing-icon-png/clothing-icon-png-17.jpg" alt="logo" />
@@ -202,7 +202,7 @@ export default function Insert() {
 
                                                 <button
                                                     disabled={isSubmitting}
-                                                    type="submit" className="text-white w-full bg-[#2557D6] hover:bg-[#2557D6]/90 focus:ring-4 focus:ring-[#2557D6]/50 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center  items-center dark:focus:ring-[#2557D6]/50 mr-2 mb-2">
+                                                    type="submit" className="mt-10 text-white w-full bg-[#2557D6] hover:bg-[#2557D6]/90 focus:ring-4 focus:ring-[#2557D6]/50 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center  items-center dark:focus:ring-[#2557D6]/50 mr-2 mb-2">
                                                     <p className="text-center">Post your product into our website here</p>
                                                 </button>
                                             </div>
