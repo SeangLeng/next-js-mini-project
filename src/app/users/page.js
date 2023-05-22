@@ -4,7 +4,7 @@ import { BASE_URL } from '../constant/constant';
 
 export default function Users() {
     const [users, setUser] = useState([])
-    fetch(`${BASE_URL}users?limit=10`)
+    fetch(`${BASE_URL}users?limit=10`, {catch: "no-store"})
         .then(users => users.json())
         .then(response => setUser(response));
         console.log(users)

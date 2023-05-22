@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 
 export default function Product() {
     const [product, setproducts] = useState([]);
-    fetch('https://api.escuelajs.co/api/v1/products?limit=20&offset=0')
+    fetch('https://api.escuelajs.co/api/v1/products?limit=20&offset=0', {catch: "no-store"})
         .then(response => response.json()).then(response => setproducts(response));
     const pathname = usePathname();
     return (
