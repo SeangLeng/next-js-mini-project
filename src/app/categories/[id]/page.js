@@ -2,21 +2,22 @@
 import { BASE_URL } from '@/app/constant/constant';
 import React, { useState } from 'react'
 
+const data = async(id)=>{
+    const response = await fetch(`https://api.escuelajs.co/api/v1/categories/${id}/products?limit=20&offset=0`)
+    const data = await response.json(); 
+    return data;
+}
+
 export default async function Categories({ params }) {
     const { id } = params;
-    const [getDetailCategory, setCate] = useState([])
-    fetch(`${BASE_URL}products`).then(res => res.json()).then(resp => {
-        const category = resp.map(product => product.category);
-        const selectedCategory = category.id;
-        data.products.filter(product => product.id === selectedCategory);
-    })
+    const product = await data(id)
 
     return (
-        <div>
-            <p className='text-5xl font-semibold text-center'>Our <span className='text-green-500'>products</span></p>
+        <div className='mt-20'>
+            <p className='text-5xl font-semibold text-center'><span className='text-green-500'>products</span></p>
             <div className='product-list mt-10 flex flex-wrap gap-5 justify-center items-start'>
                 {
-                    getDetailCategory.map(item => (
+                    product.map(item => (
                         <div class="card-products max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                             <a href={
                                 `/products/${item.id}`

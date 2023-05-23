@@ -19,11 +19,6 @@ export default function Insert() {
         .then(res => res.json())
         .then(resp => setcattegory(resp));
 
-    function onlyUnique(value, index, array) {
-        return array.indexOf(value) === index;
-    }
-
-    const uniques = productCategory.filter(onlyUnique);
     const validateSchema = Yup.object().shape({
         title: Yup.string().required("Required title"),
         price: Yup.number().required("You to set your price"),
@@ -163,7 +158,7 @@ export default function Insert() {
                                                     as="select" name="categoryId" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500" required="" >
                                                     <option value="">select your product category</option>
                                                     {
-                                                        uniques.map(item => (
+                                                        productCategory.map(item => (
                                                             <option value={item.id}>{item.name}</option>
                                                         ))
                                                     }

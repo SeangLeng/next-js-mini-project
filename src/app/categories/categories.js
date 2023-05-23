@@ -11,9 +11,9 @@ export default function Categories() {
             <div className='mt-10 flex flex-wrap gap-5 justify-center items-start'>
                 {categories.map(Category => (
                     <div class="max-w-sm max-h-fit bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                        <a href={`/`}>
+                        <Link href={`/categories/${Category.id}`}>
                             <img class="rounded-t-lg" src={Category.image} alt="" />
-                        </a>
+                        </Link>
                         <div class="p-5">
                             <a href="#">
                                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{Category.name}</h5>
