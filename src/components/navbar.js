@@ -1,4 +1,5 @@
 'use client'
+import { BASE_URL } from '@/app/constant/constant';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react'
@@ -6,14 +7,10 @@ import React from 'react'
 import { useState } from 'react';
 export default function Navbar() {
     const [productCategory, setcattegory] = useState([]);
-    fetch('https://api.escuelajs.co/api/v1/categories?limit=10')
+    fetch(`${BASE_URL}categories?limit=10`)
         .then(response => response.json()).then(response => setcattegory(response));
 
-    function onlyUnique(value, index, array) {
-        return array.indexOf(value) === index;
-    }
 
-    var uniques = productCategory.filter(onlyUnique);
     return (
         <nav class="w-full fixed top-0 z-20 bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -35,7 +32,7 @@ export default function Navbar() {
                             <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
                                 <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
                                     {
-                                        uniques.map(item => (
+                                        productCategory.map(item => (
                                             <li>
                                                 <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">{item.name}</a>
                                             </li>
@@ -43,6 +40,14 @@ export default function Navbar() {
                                     }
                                 </ul>
                             </div>
+                        </li>
+                        
+                        <li>
+                            <Link href={`/aboutUs`} class="block py-2 pl-3 pr-4 text-black bg-white rounded md:bg-transparent md:text-green-700 md:p-0 md:dark:text-green-500 dark:bg-green-600 md:dark:bg-transparent">About</Link>
+                        </li>
+
+                        <li>
+                            <Link href={`/contactUs`} class="block py-2 pl-3 pr-4 text-black bg-white rounded md:bg-transparent md:text-green-700 md:p-0 md:dark:text-green-500 dark:bg-green-600 md:dark:bg-transparent">Contact us</Link>
                         </li>
                         <li>
                             <Link href={`/insert`} className='block py-2 pl-3 pr-4 text-black bg-white rounded md:bg-transparent md:text-green-700 md:p-0 md:dark:text-green-500 dark:bg-green-600 md:dark:bg-transparent'>Add product</Link>

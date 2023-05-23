@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Psa',
-  description: 'Make the product look like your owned',
+  description: 'Welcome to our website, your ultimate destination for all things fashion! Our homepage is designed to showcase our extensive range of clothing products that cater to all your fashion needs.',
   thumbnail: 'https://cdn.logojoy.com/wp-content/uploads/2018/08/23112855/82.png',
   openGraph: {
     images: ['https://cdn.logojoy.com/wp-content/uploads/2018/08/23112855/82.png'],
@@ -25,10 +25,8 @@ export default function RootLayout({ children }) {
         <link rel="shortcut icon" href="./clothing-icon-png-17.jpg" />
       </Head>
       <body>
-        <Navbar />
-        <Suspense fallback={<Loading />}>
+        <Navbar />        
           {children}
-        </Suspense>
         <Footer />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
       </body>
