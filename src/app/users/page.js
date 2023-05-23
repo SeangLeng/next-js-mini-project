@@ -1,15 +1,15 @@
 'use client'
-import React, { useState } from 'react'
-import { BASE_URL, useEffect } from '../constant/constant';
+import React, { useState, useEffect } from 'react'
+import { BASE_URL } from '../constant/constant';
 
 export default function Users() {
     const [users, setUser] = useState([])
-    fetch(`${BASE_URL}users?limit=8`)
-        .then(users => users.json())
-        .then(response => setUser(response));
+    
 
     useEffect(() => {
-        setUser(response);
+        fetch(`${BASE_URL}users?limit=8`)
+        .then(users => users.json())
+        .then(response => setUser(response));
     }, [])        
     return (
         <section>
