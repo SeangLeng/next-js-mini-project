@@ -4,10 +4,13 @@ import { BASE_URL } from '../constant/constant';
 
 export default function Users() {
     const [users, setUser] = useState([])
-    fetch(`${BASE_URL}users?limit=8`, { catch: "no-store" })
+    fetch(`${BASE_URL}users?limit=8`)
         .then(users => users.json())
         .then(response => setUser(response));
-    console.log(users)
+        
+    useEffect(() => {
+        setUser(response);
+    }, [])        
     return (
         <section>
             <p className='text-5xl font-semibold mt-20 text-center'>Our <span className='text-green-500'>First Users</span></p>
