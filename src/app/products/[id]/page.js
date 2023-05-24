@@ -1,6 +1,6 @@
 import React from 'react'
 async function fetchProduct(id) {
-  const resp = await fetch(`https://api.escuelajs.co/api/v1/products/${id}`)
+  const resp = await fetch(`https://api.escuelajs.co/api/v1/products/${id}?limit=20`)
   return resp.json()
 }
 
@@ -19,7 +19,7 @@ export async function generateMetadata({ params }) {
       }
     },
     openGraph: {
-      images: product.images[0],
+      images: product.images[1],
       title: product.title,
       description: product.descriptionj
     }

@@ -41,7 +41,19 @@ body {
 }
 .bg-image{
   width: 75%;
+  animation: loop 10s ease-in-out infinite;
 }
+
+@keyframes loop {
+  0% {
+    transform: translateY(7%);
+  }50% {
+    transform: translateY(0%);
+  } 100%{
+    transform: translateY(7%);
+  }
+}
+
 @keyframes popup {
   0% {
     transform: scale(0);
@@ -161,6 +173,7 @@ body {
   .page-1 img {
     display: none;
   }
+
   .add-responsive {
     display: flex !important;
     flex-direction: column;
