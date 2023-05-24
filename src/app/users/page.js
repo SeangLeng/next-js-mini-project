@@ -13,7 +13,6 @@ export default async function Users() {
     useEffect(() => {
         fetchData().then(data => setUser(data))
     }, [])
-    console.log(users)
     return (
         <section>
             <p className='text-5xl font-semibold mt-20 text-center'>Our <span className='text-green-500'>First Users</span></p>

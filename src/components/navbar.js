@@ -5,14 +5,18 @@ import { usePathname } from 'next/navigation';
 import React from 'react'
 
 import { useState, useEffect } from 'react';
+
+async function fetchCategories(){
+    const response = await fetch('https://api.escuelajs.co/api/v1/categories?limit=10');
+    const data = await response.json();
+    return data;
+}
+
 export default function Navbar() {
     const [productCategory, setcattegory] = useState([]);
-    useEffect(() =>{
-        fetch(`${BASE_URL}categories?limit=10`)
-        .then(response => response.json()).then(response => setcattegory(response));
-    }, []); 
-
-
+    useEffect(() => {
+        fetchCategories().then(data => setcattegory(data))
+    })
     return (
         <nav class="w-full fixed top-0 z-20 bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">

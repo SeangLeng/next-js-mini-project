@@ -1,10 +1,19 @@
 'use client'
 import Link from 'next/link';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+
+async function fetchCategories(){
+    const response = await fetch('https://api.escuelajs.co/api/v1/categories?limit=10');
+    const data = await response.json();
+    return data;
+}
 
 export default function Categories() {
     const [categories, SetCategories] = useState([]);
-    fetch('https://api.escuelajs.co/api/v1/categories?limit=10').then(Response => Response.json()).then(response => SetCategories(response));
+    useEffect(() => {
+        fetchCategories().then(data => SetCategories(data))
+    })
+
     return (
         <section >
             <p className='text-5xl font-semibold mt-20 text-center'>Categories <span className='text-green-500'>Collection</span></p>
