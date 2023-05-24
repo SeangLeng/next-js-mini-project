@@ -6,7 +6,7 @@ import Users from '../users/page';
 export default function Homepage() {
     return (
         <div>
-            <section className="page-1 px-40 flex items-center justify-between w-100 h-screen" id='page-1'>
+            <section className="page-1 mt-20 px-40 flex items-center justify-between w-100 h-screen" id='page-1'>
                 <div>
                     <h1 className="header-homepage text-5xl font-bold uppercase"><span className='text-green-400'>Psa</span> of production website</h1>
                     <p style={{ width: "75%" }} className='mt-5 text-gray-500'>Welcome to our website, your ultimate destination for all things fashion! Our homepage is designed to showcase our extensive range of clothing products that cater to all your fashion needs.</p>
