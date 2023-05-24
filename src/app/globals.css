@@ -159,13 +159,14 @@ body {
     transform: translateY(0);
   }
 }
-
-@media screen and (max-width: 868px) {
+@media screen and (max-width: 1500px){
   .product-list {
     display: flex !important;
     flex-direction: column;
     width: 100%;
   }
+}
+@media screen and (max-width: 868px) {
   .page-1 {
     display: flex;
     margin-top: 6rem;
