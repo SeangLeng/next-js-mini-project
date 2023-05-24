@@ -7,6 +7,13 @@ import * as Yup from 'yup';
 import { BASE_URL } from "../constant/constant";
 
 import '.././globals.css'
+
+async function fetchCategories(){
+    const response = await fetch('https://api.escuelajs.co/api/v1/categories?limit=10');
+    const data = await response.json();
+    return data;
+}
+
 export default function Insert() {
 
     const [isLoading, setIsLoading] = useState(true);
@@ -15,9 +22,9 @@ export default function Insert() {
     const FILE_SIZE = 1024 * 1024 * 10; // 10MB
     const SUPPORTED_FORMATS = ["image/jpg", "image/jpeg", "image/gif", "image/png"];
     const [productCategory, setcattegory] = useState([]);
-    fetch(`${BASE_URL}categories`)
-        .then(res => res.json())
-        .then(resp => setcattegory(resp));
+    useEffect(() => {
+        fetchCategories().then(data => setcattegory(data))
+    })
 
     const validateSchema = Yup.object().shape({
         title: Yup.string().required("Required title"),
