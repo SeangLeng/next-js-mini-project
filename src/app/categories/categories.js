@@ -15,9 +15,9 @@ export default function Categories() {
                             <img class="rounded-t-lg" src={Category.image} alt="" />
                         </Link>
                         <div class="p-5">
-                            <a href="#">
+                            <Link href={`/categories/${Category.id}`}>
                                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{Category.name}</h5>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 ))}

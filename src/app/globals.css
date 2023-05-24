@@ -58,6 +58,7 @@ body {
   border-radius: 20px;
   box-shadow: 0 0 15px rgba(199, 199, 199, 0.525);
   border: 0.3px solid rgb(116, 189, 116);
+  transform: scale(1.03);
 }
 .header-homepage {
   position: relative;
