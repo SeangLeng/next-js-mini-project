@@ -4,11 +4,13 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react'
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 export default function Navbar() {
     const [productCategory, setcattegory] = useState([]);
-    fetch(`${BASE_URL}categories?limit=10`)
+    useEffect(() =>{
+        fetch(`${BASE_URL}categories?limit=10`)
         .then(response => response.json()).then(response => setcattegory(response));
+    }, []); 
 
 
     return (
