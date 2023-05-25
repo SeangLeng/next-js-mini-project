@@ -34,7 +34,7 @@ export default function Homepage() {
                 <Image src={cover_bg} alt='cover-bg' className='bg-image'/>
             </section>
 
-            <section className="page-2 flex-col items-center justify-between w-100">
+            <section className="page-2 px-20 flex-col items-center justify-between w-100">
                 <Product />
             </section>
 
