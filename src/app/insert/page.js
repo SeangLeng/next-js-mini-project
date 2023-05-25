@@ -94,7 +94,7 @@ export default function Insert() {
                 price: 0,
                 description: "",
                 categoryId: 0,
-                images: "",
+                images: [],
             }}
             validationSchema={validateSchema}
             onSubmit={async (values, { setSubmitting }) => {
@@ -104,7 +104,7 @@ export default function Insert() {
                 const images = await uploadImage({ file: formData });
                 console.log("avatar", images);
                 console.log(values.file);
-                values.images = images;
+                values.images = [images];
 
                 setTimeout(() => {
                     alert(JSON.stringify(values, null, 2));
