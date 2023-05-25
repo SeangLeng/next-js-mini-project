@@ -10,7 +10,7 @@ export default function Homepage() {
                 <div>
                     <h1 className="header-homepage text-5xl font-bold uppercase"><span className='text-green-400'>Psa</span> of production website</h1>
                     <p style={{ width: "75%" }} className='mt-5 text-gray-500'>Welcome to our website, your ultimate destination for all things fashion! Our homepage is designed to showcase our extensive range of clothing products that cater to all your fashion needs.</p>
-                    <div className='product-list max-w mt-5 flex gap-2 justify-between'>
+                    <div className='cards max-w mt-5 flex gap-2 justify-between'>
 
                         <a href="#" class="card block max-w-sm p-6">
                             <h5 class="mb-2 text-2xl font-bold tracking-tight text-green-500 dark:text-white">Find us</h5>
