@@ -89,6 +89,7 @@ body {
   border-left: 10px solid rgba(16, 151, 16, 0.707);
   animation: fromleft 10s ease-in-out infinite;
 }
+
 .product-list{
   display: flex;
   justify-content: center;

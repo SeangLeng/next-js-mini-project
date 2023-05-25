@@ -35,9 +35,9 @@ export default async function ProductDetail({ params }) {
         <img src={product.images} alt="" />
           <div className="detail">
             <h1 className='text-5xl mb-10 capitalize text-green-500 font-semibold '>{product.title}</h1>
-            <p className='text-2xl mb-10'>{product.description}</p>
-            <p className='text-2xl'>Category : {product.category.name}</p>
-            <p className='text-3xl mt-10'>Price: <span className='text-green-400'>${product.price}</span></p>
+            <p className='text-2xl mb-10 text-black'>{product.description}</p>
+            <p className='text-2xl text-black'>Category : {product.category.name}</p>
+            <p className='text-3xl mt-10 text-black'>Price: <span className='text-green-400'>${product.price}</span></p>
           </div>
       </section>
     </main>
