@@ -15,7 +15,7 @@ export default async function Categories({ params }) {
     return (
         <div className='mt-20'>
             <p className='text-5xl font-semibold text-center'><span className='text-green-500'>products</span></p>
-            <div className='product-list mt-10 flex flex-wrap gap-5 justify-center items-start'>
+            <div className='product-list px-5 mt-10 flex flex-wrap gap-5 justify-center items-start'>
                 {
                     product.map(item => (
                         <div class="card-products max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">

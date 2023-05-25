@@ -192,6 +192,9 @@ body {
   .page-3 {
     padding: 5%;
   }
+  .page-2 {
+    padding: 5%;
+  }
   .card {
     width: 100%;
   }
@@ -199,5 +202,6 @@ body {
     display: flex;
     flex-direction: column;
     margin-top: 6rem;
+    margin-bottom: 6rem;
   }
 }
